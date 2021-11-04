@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Roboto;
+}
+.wrapper{
+	min-width: 100%;
+	max-width: 2560px;
+	height: 100vh;
+	background: url("picture/photo/background.jpg") 100% 100% no-repeat;
+	background-size: cover;
+	position: relative;
+	padding: 2% 3%;
+	box-shadow: inset 0 3em 2em rgb(27, 25, 25);
+	overflow: hidden;
+}
+header{
+	position: fixed;
+	top: 0;
+	width: 94%;
+	padding: 10px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 60%;
+}
+.navElement{
+	font-size: 1.6vw;
+	color: wheat;
+	cursor: pointer;
+	position: relative;
+}
+.navElement:hover{
+	transform: scale(1.1);
+}
+.navSocial{
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+}
+.navSocial img{
+	width: 3.5vw;
+	height: 3.5vw;
+}
+.navSocial img:hover{
+	transform: scale(1.1);
+}
+
+.dropDown{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 16vw;
+}
+.dropDown li{
+	background: rgb(65, 56, 56);
+	padding: 5px 7px;
+	list-style: none;
+	font-size: 1.2vw;
+	list-style-position: inside;
+	vertical-align: middle;
+}
+
+.dropDown li:hover{
+	background: rgb(100, 89, 89);
+}
+.dropDown .tel{
+	list-style-image: url(picture/icons/tel.png);
+}
+.dropDown .viber{
+	list-style-image: url(picture/icons/viber.png);
+}
+.dropDown .whatsApp{
+	list-style-image: url(picture/icons/whatsapp.png);
+}
+.dropDown .telegram{
+	list-style-image: url(picture/icons/telegram.png);
+}
+.dropDown .email{
+	list-style-image: url(picture/icons/email.png);
+}
+#contacts::after{
+	width: 1vw;
+	height: 1vw;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+
+}
+#contacts:hover .dropDown{
+	display: block;
+}
+
+@keyframes animationPages{
+	0%{		
+		width: 1%;
+		height: 1%;
+		/*transform: scale(0.2);	*/
+		transform: rotate(0);
+		font-size: 0.02vw;	
+		top: 50%;
+		left: 50%;	
+	}
+	100%{		
+		width: 100%;
+    	height: 100%;
+    	font-size: 1.2vw;
+    	/*transform: scale(1);  */  
+    	transform: rotate(720deg);	
+	}
+}
+
+
+
+.benefit{
+	animation: animationPages 0.8s;
+	width: 100%;
+	height: 100%;		
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 5%;
+	background-color: rgb(212, 208, 200);;
+	opacity: 0.85;
+	display: none;
+}
+#close{
+	transform: rotate(45deg);
+	font-size: 4vw;
+	position: absolute;
+	top: 3%;
+	right: 3%;
+	cursor: pointer;
+}
