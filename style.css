@@ -64,7 +64,7 @@ nav{
 	padding-top: 15px;
 }*/
 
-.dropDown{
+/*.dropDown{
 	display: none;
 	position: absolute;
 	top: 0;
@@ -79,9 +79,9 @@ nav{
 	font-size: 1.2vw;
 	list-style-position: inside;
 	vertical-align: middle;
-}
+}*/
 
-.dropDown li:hover{
+/*.dropDown li:hover{
 	background: rgb(100, 89, 89);
 }
 .dropDown .tel{
@@ -98,7 +98,7 @@ nav{
 }
 .dropDown .email{
 	list-style-image: url(picture/icons/email.png);
-}
+}*/
 #contacts::after{
 	width: 1vw;
 	height: 1vw;
@@ -164,7 +164,6 @@ nav{
 
 /*____________________________доробити_________________________*/
 .slider{
-
     position: relative; 
     height: 100%;   
     display: flex;  
@@ -172,7 +171,6 @@ nav{
     justify-content: center;
 }
 .slides{
-
 	height: 100vh;   
 	display: flex;
 	flex-direction: row;
@@ -181,24 +179,8 @@ nav{
 	top: 0;
 	left: 0;
 }
-/*@keyframes sliderAnimation{
-	0%{		
-		transform: translateX(100%);
-	}
-	20%{
-		transform: translateX(0);
-	}
-	80%{
-		transform: translateX(0);
-	}
-	
 
-	100%{		
-		transform: translateX(-100%);
-	}
-}*/
-.sliderItem{  
-	/*animation:  sliderAnimation 2.5s;*/
+.sliderItem{  	
 	color: white;
 	font-size: 4vw;
 	font-weight: bold;
