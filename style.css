@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@font-face{
+	font-family: Caveat;
+	src: url(fonts/Caveat/Caveat-VariableFont_wght.ttf);
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -53,13 +57,20 @@ nav{
 .navSocial img:hover{
 	transform: scale(1.1);
 }
+/*.dropDownWrap{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-top: 15px;
+}*/
 
 .dropDown{
 	display: none;
 	position: absolute;
-	top: 100%;
+	top: 0;
 	left: 0;
 	width: 16vw;
+	padding-top: 20px;
 }
 .dropDown li{
 	background: rgb(65, 56, 56);
@@ -98,30 +109,26 @@ nav{
 #contacts:hover .dropDown{
 	display: block;
 }
+/*#galery:hover .dropDown{
+	display: block;
+	box-sizing: content-box;
+}*/
 
 @keyframes animationPages{
 	0%{		
-		width: 1%;
-		height: 1%;
-		/*transform: scale(0.2);	*/
-		transform: rotate(0);
-		font-size: 0.02vw;	
-		top: 50%;
-		left: 50%;	
+		transform: translateX(100%);
 	}
+	
+
 	100%{		
-		width: 100%;
-    	height: 100%;
-    	font-size: 1.2vw;
-    	/*transform: scale(1);  */  
-    	transform: rotate(720deg);	
+		transform: translateX(0);
 	}
 }
 
 
 
-.benefit{
-	animation: animationPages 0.8s;
+.newPage{
+	animation: animationPages 0.4s;
 	width: 100%;
 	height: 100%;		
 	position: absolute;
@@ -143,4 +150,59 @@ nav{
 	top: 3%;
 	right: 3%;
 	cursor: pointer;
+}
+
+#carouselBox{
+	/*width: 100%;*/
+	/*height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;*/
+}
+
+/*____________________________доробити_________________________*/
+.slider{
+
+    position: relative; 
+    height: 100%;   
+    display: flex;  
+    align-items: center;   
+    justify-content: center;
+}
+.slides{
+
+	height: 100vh;   
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/*@keyframes sliderAnimation{
+	0%{		
+		transform: translateX(100%);
+	}
+	20%{
+		transform: translateX(0);
+	}
+	80%{
+		transform: translateX(0);
+	}
+	
+
+	100%{		
+		transform: translateX(-100%);
+	}
+}*/
+.sliderItem{  
+	/*animation:  sliderAnimation 2.5s;*/
+	color: white;
+	font-size: 4vw;
+	font-weight: bold;
+	width: 100vw;
+	text-align: center;
+	font-family: Caveat;
 }
